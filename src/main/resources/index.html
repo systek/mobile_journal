@@ -1,4 +1,4 @@
-CTYPE html> 
+<!DOCCTYPE html>
 <html> 
  
 <head> 
@@ -17,16 +17,14 @@ CTYPE html>
 <div data-role="page" id="foo"> 
  
 	<div data-role="header"> 
-		<h1>Multi-page</h1> 
+		<h1>Systek timeføringssystem</h1>
 	</div><!-- /header --> 
  
 	<div data-role="content" id="one">	
-		<h2>Page 1</h2> 
-		
- 
-		<h3>Show internal pages:</h3> 
-		<p><a href="#two" data-role="button">Show page "two"</a></p>	
-		<p><a href="#popup"data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p> 
+		<p><a href="hourreg.html" data-role="button">Før timer</a></p>
+		<p><a href="checkin.html" data-role="button" data-rel="dialog">Sjekk inn</a></p>
+		<p><a href="statistics.html" data-role="button">Statistikk</a></p>
+		<p><a href="settings.html"data-role="button" data-rel="dialog" data-transition="pop">Settings</a></p>
 	</div><!-- /content --> 
 	
 	<div data-role="footer" data-theme="d"> 
@@ -34,43 +32,7 @@ CTYPE html>
 	</div><!-- /footer --> 
 </div><!-- /page one --> 
  
- 
-<!-- Start of second page: #two --> 
-<div data-role="page" id="two" data-theme="a"> 
- 
-	<div data-role="header"> 
-		<h1>Two</h1> 
-	</div><!-- /header --> 
- 
-	<div data-role="content" data-theme="a">	
-		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p>	
-		
-	</div><!-- /content --> 
-	
-	<div data-role="footer"> 
-		<h4>Page Footer</h4> 
-	</div><!-- /footer --> 
-</div><!-- /page two --> 
- 
- 
-<!-- Start of third page: #popup --> 
-<div data-role="page" id="popup"> 
- 
-	<div data-role="header" data-theme="e"> 
-		<h1>Dialog</h1> 
-	</div><!-- /header --> 
- 
-	<div data-role="content" data-theme="d">	
-		<h2>Popup</h2> 
-		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
-		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
-	</div><!-- /content --> 
-	
-	<div data-role="footer"> 
-		<h4>Page Footer</h4> 
-	</div><!-- /footer --> 
-</div><!-- /page popup --> 
- 
+
 </body> 
 </html> 
 
