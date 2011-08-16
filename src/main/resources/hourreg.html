@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html>
-<div data-role="page" id="hourreg" data-theme="a">
+<div data-role="page" id="hourreg">
 
     <div data-role="header">
-        <h1>Two</h1>
+        <a href="#foo" data-direction="reverse" data-role="button" data-icon="arrow-l">Back</a>
+        <h1>Timeføring</h1>
     </div>
     <!-- /header -->
 
-    <div data-role="content" data-theme="a">
-        <p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p>
+    <div data-role="content">
 
+
+        <h2><span data-bind="text: prettyDate()"></span></h2>
+
+        <p>Prosjektnavn: <span data-bind='text: name'></span>
+
+        </p>
+
+        <p>
+            <label>Timer</label>
+            <input data-bind="value: hours" type="number" step="1" min="0" max="23"/>
+            <input data-bind="value: minutes" type="number" step="30" min="0" max="59"/>
+        </p>
+
+        <p data-bind="visible: notSaved">
+            <button data-bind="click: save">Save</button>
+        </p>
     </div>
     <!-- /content -->
 
     <div data-role="footer">
-        <h4>Page Footer</h4>
+        <a data-role="button" data-bind="click: prevDay" data-icon="arrow-l">Previous day</a>
+        <a data-role="button" data-bind="click: nextDay" data-icon="arrow-r">Next day</a>
     </div>
     <!-- /footer -->
-</div><!-- /page two -->
+</div>
+<!-- /page two -->
 </html>

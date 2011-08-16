@@ -10,6 +10,7 @@ require('http').createServer(function (request, response) {
     //
     // Serve files!
     //
+    console.log("Serving " + request.url);
     file.serve(request, response);
   });
 }).listen(8080);
