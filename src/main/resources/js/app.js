@@ -1,2 +1,3 @@
 App = {
+    avaliableProjects: ko.observableArray()
 };

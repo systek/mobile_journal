@@ -6,6 +6,7 @@ HourRegistration = function(projectName, hoursRegistered, minutesRegistered){
 
 //TODO See if we can avoid singleton to make unit testing easier
 App.hourRegistrationModel =  {
+    avaliableProjects: App.avaliableProjects,
     name: ko.observable("TestProsject"),
     minutes: ko.observable(30),
     hours: ko.observable(7),
