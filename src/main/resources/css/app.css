@@ -1,0 +1,10 @@
+H1.centered{
+    text-align: center;
+}
+
+IMG.centered{
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

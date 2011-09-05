@@ -4,7 +4,10 @@ var jsonProducer = require("./json-producer");
 //
 // Create a node-static server instance to serve the './public' folder
 //
-var file = new (static.Server)('./src/main/resources');
+var file = new (static.Server)('./src/main/resources', {headers: 
+	{
+	"Access-Control-Allow-Origin": "*"
+	}});
 var testFile = new (static.Server)('./src/test/resources');
 var json = new (jsonProducer.Server)("hourreg");
 
@@ -19,7 +22,7 @@ require('http').createServer(
                 file.serve(request, response);
             }
         });
-    }).listen(8080);
+    }).listen(8079);
 
 
 require('http').createServer(

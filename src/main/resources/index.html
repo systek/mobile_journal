@@ -6,11 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<title>Page Title</title> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" /> 
+	<link rel="stylesheet" href="css/app.css" />
 	<link rel="stylesheet" href="css/hourreg.css" />
 	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 	<script src="js/jquery-1.0b2.js"></script> 
     <script src="js/knockout-1.2.1.debug.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/token.js"></script>
     <script src="js/binding.js"></script>
 	<script src="js/date.js"></script>
 	<script src="js/services.js"></script>
@@ -18,10 +20,15 @@
 </head>
  
 	
-<body> 
+<body>
+
+<div data-role="page" id="splash">
+    <img class="centered" alt="Loading..." src="img/ajax-loader.gif"/>
+    <h1 class="centered">Loading....</h1>
+</div>
  
 <!-- Start of first page: #one --> 
-<div data-role="page" id="foo"> 
+<div data-role="page" id="startpage">
  
 	<div data-role="header"> 
 		<h1>Systek timeføringssystem</h1>
@@ -29,11 +36,10 @@
  
 	<div data-role="content" id="one">	
 		<p><a href="hourreg.html" data-role="button">Før timer</a></p>
-		<p><a href="checkin.html" data-role="button" data-rel="dialog">Sjekk inn</a></p>
+		<p><a href="checkin.html" data-role="button">Sjekk inn</a></p>
 		<p><a href="statistics.html" data-role="button">Statistikk</a></p>
-		<p><a href="settings.html"data-role="button" data-rel="dialog" data-transition="pop">Settings</a></p>
-	</div><!-- /content --> 
-	
+		<p><a href="settings.html" data-role="button">Settings</a></p>
+	</div><!-- /content -->
 	<div data-role="footer" data-theme="d"> 
 		<h4>Page Footer</h4> 
 	</div><!-- /footer --> 

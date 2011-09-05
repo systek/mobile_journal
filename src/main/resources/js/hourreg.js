@@ -1,13 +1,18 @@
 
-HourRegistration = function(projectName, hoursRegistered, minutesRegistered){
+HourRegistration = function(date, projectNumber, activityNumber, hoursRegistered, minutesRegistered){
     this.hoursRegistered = hoursRegistered;
     this.minutesRegistered = minutesRegistered;
-}
+    this.projectNumber = projectNumber;
+    this.activityNumber = activityNumber;
+    this.date = date;
+    this.saved = false;
+};
 
 //TODO See if we can avoid singleton to make unit testing easier
 App.hourRegistrationModel =  {
     avaliableProjects: App.avaliableProjects,
-    name: ko.observable("TestProsject"),
+    projectId: ko.observable("TestProsject"),
+    activityId: ko.obserable()
     minutes: ko.observable(30),
     hours: ko.observable(7),
     date: ko.observable(new Date()),
